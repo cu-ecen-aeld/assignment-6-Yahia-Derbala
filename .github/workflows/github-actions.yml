@@ -16,7 +16,7 @@ jobs:
           clean: false
           submodules: 'recursive'
       - uses: webfactory/ssh-agent@v0.5.4
-
+        with:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
       - name: Free Disk Space (Ubuntu)
         uses: jlumbroso/free-disk-space@v1.3.1
