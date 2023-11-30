@@ -16,6 +16,10 @@ jobs:
           clean: false
           submodules: 'recursive'
       - uses: webfactory/ssh-agent@v0.5.4
+
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+      - name: Free Disk Space (Ubuntu)
+        uses: jlumbroso/free-disk-space@v1.3.1
         with:
           tool-cache: true
           android: true
@@ -23,10 +27,7 @@ jobs:
           haskell: true
           large-packages: true
           docker-images: true
-          swap-storage: true
-          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
-      - name: Free Disk Space (Ubuntu)
-        uses: jlumbroso/free-disk-space@v1.3.1
+          swap-storage: true 
       - name: Run build
         timeout-minutes: 600
         run: |
