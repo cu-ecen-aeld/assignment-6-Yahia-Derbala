@@ -1,9 +1,10 @@
+# See https://git.yoctoproject.org/poky/tree/meta/files/common-licenses
 LICENSE = "MIT"
-LIC_FILES_CHKSUM = "file://../LICENSE;md5=f098732a73b5f6f3430472f5b094ffdb"
+LIC_FILES_CHKSUM = "file://${COMMON_LICENSE_DIR}/MIT;md5=0835ade698e0bcf8506ecda2f7b4f302"
 
 FILESEXTRAPATHS:prepend = "${THISDIR}/files:"
 
-SRC_URI = "git://git@github.com/cu-ecen-aeld/assignment-7-Yahia-Derbala.git;protocol=ssh;branch=master"
+SRC_URI = "git://git@github.com/cu-ecen-aeld/assignments-3-and-later-Yahia-Derbala.git;protocol=ssh;branch=master"
 SRC_URI += "file://aesdchar_init_script.sh"
 
 # Modify these as desired
