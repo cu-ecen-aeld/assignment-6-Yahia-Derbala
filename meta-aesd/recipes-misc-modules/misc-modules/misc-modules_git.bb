@@ -42,6 +42,7 @@ do_install () {
     install -d ${D}${base_libdir}/modules/${KERNEL_VERSION}/
     install -d ${D}${base_libdir}/modules/${KERNEL_VERSION}/extra/
     install -m 0755 ${S}/faulty.ko ${D}${base_libdir}/modules/${KERNEL_VERSION}/extra/
+    install -m 0755 ${S}/hello.ko ${D}${base_libdir}/modules/${KERNEL_VERSION}/
     
     install -d ${D}/etc/misc-modules_startup
     install -m 0755 ${S}/module_unload ${D}/etc/misc-modules_startup/module_unload
